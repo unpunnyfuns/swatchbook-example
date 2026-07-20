@@ -1,0 +1,26 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction" />
+
+# swatchbook example
+
+A working consumer of the published `@unpunnyfuns/swatchbook-*` packages wired into Storybook. It doubles as a starter template and a regression harness for swatchbook itself.
+
+## The token set
+
+Two axes drive everything: **mode** (Light / Dark) and **brand** (A / B). Flip them in the toolbar and every block on every page reacts.
+
+## Where to look
+
+- **Tokens / Overview** shows your colours, dimensions, and typography rendered straight from the DTCG tokens.
+- **Components / Button** is a real component styled from tokens through the `useToken` hook.
+- **Advanced / Custom presenters** overrides how swatchbook renders a token type, two different ways.
+
+## Run it
+
+```sh
+pnpm install
+pnpm storybook
+```
+
+The tokens live in `src/tokens/`; the addon is wired in `.storybook/main.ts` and `.storybook/preview.ts`. Replace the tokens with your own to make this your project.

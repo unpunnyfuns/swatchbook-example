@@ -3,7 +3,7 @@ import { expect } from 'storybook/test';
 import { Button } from './Button.tsx';
 
 const meta = {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
   args: { label: 'Accent' },
 } satisfies Meta<typeof Button>;
