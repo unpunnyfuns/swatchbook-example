@@ -16,10 +16,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      # storybook build writes .swatchbook/tokens.d.ts (the addon codegen);
-      # it must run before typecheck so tsc sees the generated declaration.
-      - run: npm run build-storybook
-      - run: npm run typecheck
+      - run: npm run build
       - run: npm test
 
   # Publish the built Storybook to GitHub Pages, but only after `verify`
