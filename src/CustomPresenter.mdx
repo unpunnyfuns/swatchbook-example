@@ -1,0 +1,23 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorPalette, PresenterContext, mergePresenters } from '@unpunnyfuns/swatchbook-addon';
+import { DualSurfaceSwatch } from './DualSurfaceSwatch.tsx';
+
+<Meta title="Custom presenter" />
+
+# Custom color presenter
+
+The built-in blocks render each token `$type` through a presenter, and you can supply your own. `DualSurfaceSwatch` (`src/DualSurfaceSwatch.tsx`) is a custom `color` presenter that paints each swatch over both a light and a dark surface, so you can judge a colour against either background.
+
+Wrapping a region in `PresenterContext.Provider` with a merged registry overrides how colours render inside it, while the rest of your docs stay on the built-in swatch (see the `Tokens/Overview` page for the default rendering):
+
+<PresenterContext.Provider value={mergePresenters({ color: DualSurfaceSwatch })}>
+  <ColorPalette filter="color.**" />
+</PresenterContext.Provider>
+
+To apply a custom presenter across the whole Storybook rather than one subtree, pass it to the addon in `.storybook/preview.ts`:
+
+```ts
+swatchbookAddon({ presenters: { color: DualSurfaceSwatch } })
+```
+
+That registration reaches every block, in both stories and MDX docs pages.

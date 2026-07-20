@@ -1,7 +1,7 @@
 import { defineSwatchbookConfig } from '@unpunnyfuns/swatchbook-core';
 
 export default defineSwatchbookConfig({
-  resolver: 'tokens/resolver.json',
+  resolver: 'src/tokens/resolver.json',
   default: { mode: 'Light', brand: 'A' },
   cssVarPrefix: 'sb',
   presets: [
