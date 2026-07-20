@@ -27,5 +27,3 @@ Click **Use this template** to start your own project from this setup. Then:
 1. Replace `src/tokens/` with your own DTCG tokens, and point `swatchbook.config.ts` at your resolver, axes, and prefix.
 2. Swap the demo `Button`, presenter, and docs pages under `src/` for your own.
 3. To publish your Storybook to GitHub Pages, enable it in your repo (**Settings → Pages → Source: GitHub Actions**). The included workflow builds and deploys it on every push to `main`.
-
-The `@unpunnyfuns/swatchbook-*` dependencies track a swatchbook major; bump them when you move to a newer major.
