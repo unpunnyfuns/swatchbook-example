@@ -1,0 +1,35 @@
+{
+  "$schema": "https://www.designtokens.org/TR/2025.10/resolver/",
+  "version": "2025.10",
+  "name": "swatchbook-example",
+  "description": "Minimal two-axis DTCG set for the swatchbook consumer example.",
+  "sets": {
+    "tokens": {
+      "description": "Flat DTCG tokens grouped by $type.",
+      "sources": [{ "$ref": "./base.tokens.json" }]
+    }
+  },
+  "modifiers": {
+    "mode": {
+      "description": "Light/dark surface + text baseline.",
+      "contexts": {
+        "Light": [],
+        "Dark": [{ "$ref": "./themes/dark.json" }]
+      },
+      "default": "Light"
+    },
+    "brand": {
+      "description": "Accent palette. A leaves the baseline alone; B overrides the accent.",
+      "contexts": {
+        "A": [],
+        "B": [{ "$ref": "./themes/brand-b.json" }]
+      },
+      "default": "A"
+    }
+  },
+  "resolutionOrder": [
+    { "$ref": "#/sets/tokens" },
+    { "$ref": "#/modifiers/mode" },
+    { "$ref": "#/modifiers/brand" }
+  ]
+}
