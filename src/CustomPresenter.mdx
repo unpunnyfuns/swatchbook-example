@@ -6,7 +6,7 @@ import { DualSurfaceSwatch } from './DualSurfaceSwatch.tsx';
 
 # Custom color presenters
 
-The built-in blocks render each token `$type` through a presenter, and you can supply your own. Wrap a region in `PresenterContext.Provider` with a merged registry to override how a type renders inside it, while the rest of your docs stay on the built-in (see `Tokens/Overview`).
+The built-in blocks render each token `$type` through a [presenter](https://unpunnyfuns.github.io/swatchbook/guides/creating-custom-presenters/), and you can supply your own. Wrap a region in `PresenterContext.Provider` with a merged registry to override how a type renders inside it, while the rest of your docs stay on the built-in (see `Tokens/Overview`).
 
 ## A bespoke swatch
 
@@ -18,7 +18,7 @@ The built-in blocks render each token `$type` through a presenter, and you can s
 
 ## Applying one everywhere
 
-To apply a presenter across the whole Storybook rather than one subtree, pass it to the addon in `.storybook/preview.ts`:
+To apply a presenter across the whole Storybook rather than one subtree, pass it to the [addon](https://unpunnyfuns.github.io/swatchbook/reference/addon/) in `.storybook/preview.ts`:
 
 ```ts
 swatchbookAddon({ presenters: { color: DualSurfaceSwatch } })
