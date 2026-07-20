@@ -3,7 +3,7 @@
 A standalone consumer of [swatchbook](https://github.com/unpunnyfuns/swatchbook) built two ways at once:
 
 - a **canonical example** of wiring `@unpunnyfuns/swatchbook-addon` into a real Storybook project, and
-- a **regression harness** that depends on the published `@unpunnyfuns/swatchbook@2.0.0` packages (never workspace-linked), so it exercises the packaging and codegen surface that the monorepo's own source-linked tests cannot.
+- a **regression harness** that depends on the published `@unpunnyfuns/swatchbook-*` packages (`-addon`, `-core`, …) at 2.0.0 (never workspace-linked), so it exercises the packaging and codegen surface that the monorepo's own source-linked tests cannot.
 
 ## What it covers
 

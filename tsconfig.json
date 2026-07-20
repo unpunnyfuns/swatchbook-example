@@ -14,5 +14,5 @@
     "skipLibCheck": true,
     "types": ["node", "vite/client"]
   },
-  "include": ["src", ".storybook", ".swatchbook/**/*.d.ts", "swatchbook.config.ts", "tokens/**/*.json"]
+  "include": ["src", ".storybook", ".swatchbook/**/*.d.ts", "swatchbook.config.ts"]
 }
