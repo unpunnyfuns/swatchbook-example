@@ -10,18 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm exec playwright install --with-deps chromium
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
       # storybook build writes .swatchbook/tokens.d.ts (the addon codegen);
       # it must run before typecheck so tsc sees the generated declaration.
-      - run: pnpm build-storybook
-      - run: pnpm typecheck
-      - run: pnpm test
+      - run: npm run build-storybook
+      - run: npm run typecheck
+      - run: npm test
 
   # Publish the built Storybook to GitHub Pages, but only after `verify`
   # passes and only on main, so a red build never reaches the live site.
@@ -37,13 +36,12 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@v6
       - uses: actions/setup-node@v7
         with:
           node-version: 24
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build-storybook
+          cache: npm
+      - run: npm ci
+      - run: npm run build-storybook
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

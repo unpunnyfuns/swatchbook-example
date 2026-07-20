@@ -14,13 +14,13 @@ Two axes drive everything: **mode** (Light / Dark) and **brand** (A / B). Flip t
 
 - **Tokens / Overview** shows your colours, dimensions, and typography rendered straight from the DTCG tokens.
 - **Components / Button** is a real component styled from tokens through the `useToken` hook.
-- **Advanced / Custom presenters** overrides how swatchbook renders a token type, two different ways.
+- **Advanced / Custom presenters** overrides how swatchbook renders a token type with a custom component.
 
 ## Run it
 
 ```sh
-pnpm install
-pnpm storybook
+npm install
+npm run storybook
 ```
 
 The tokens live in `src/tokens/`; the addon is wired in `.storybook/main.ts` and `.storybook/preview.ts`. Replace the tokens with your own to make this your project.

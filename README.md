@@ -15,10 +15,10 @@ A standalone consumer of [swatchbook](https://github.com/unpunnyfuns/swatchbook)
 ## Run it
 
 ```sh
-pnpm install
-pnpm storybook        # dev server
-pnpm build            # storybook build + tsc --noEmit (the harness's core assertion)
-pnpm test             # one smoke story via @storybook/addon-vitest
+npm install
+npm run storybook   # dev server
+npm run build       # storybook build + tsc --noEmit (the harness's core assertion)
+npm test            # one smoke story via @storybook/addon-vitest
 ```
 
 ## Why the build order matters

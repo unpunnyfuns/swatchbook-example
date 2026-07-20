@@ -6,7 +6,6 @@
   "engines": {
     "node": ">=24.14.0"
   },
-  "packageManager": "pnpm@11.1.2",
   "scripts": {
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
