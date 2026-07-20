@@ -1,0 +1,28 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorPalette, TokenTable, TokenDetail, DimensionScale, TypographyScale } from '@unpunnyfuns/swatchbook-addon';
+
+<Meta title="Tokens/Overview" />
+
+# Design tokens
+
+Flip `mode` and `brand` in the toolbar; every block below reacts.
+
+## Colors
+
+<ColorPalette filter="color.**" />
+
+## Dimensions
+
+<DimensionScale filter="dimension.**" />
+
+## Typography
+
+<TypographyScale filter="typography.**" />
+
+## All tokens
+
+<TokenTable filter="**" />
+
+## A single token
+
+<TokenDetail path="color.accent.bg" />
