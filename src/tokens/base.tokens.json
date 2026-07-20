@@ -37,7 +37,7 @@
     "$type": "typography",
     "body": {
       "$value": {
-        "fontFamily": "system-ui, sans-serif",
+        "fontFamily": ["system-ui", "sans-serif"],
         "fontSize": { "value": 1, "unit": "rem" },
         "fontWeight": 400,
         "lineHeight": 1.5
